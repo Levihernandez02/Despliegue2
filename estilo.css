@@ -1,0 +1,653 @@
+/*Titulos con con patria, cuerpo con NOTOSANS REGULAR*/
+/* Reset y fuente base */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+
+/* Contenedor de la página completa */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;       /* centra horizontalmente todo */
+    justify-content: center; /* inicia desde arriba */
+    box-sizing: border-box;
+    /*background: #f5f5f5;       opcional: color de fondo */
+}
+
+/* Párrafos */
+p,hr {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: black;
+}
+
+/* SECCION 1 paguina principal ---------------- SECCION1 ----------------------------------- SECCION 1*/
+
+/* Contenedor de encabezado principal */
+#seccion1 {
+    max-width: 870px;          /* ancho relativo a la pantalla */
+    width: 550px; 
+    align-content: center;            /* ocupa todo el ancho disponible */
+    margin: 0 auto;          /* centra horizontalmente */
+    padding: 20px;           /* espacio interno */
+    box-sizing: border-box;  /* incluye padding dentro del ancho */
+
+    /* Fondo degradado: 1/3 blanco, 2/3 color */
+    background: linear-gradient(
+        to bottom,
+        #ffffff 0%,        /* blanco desde arriba */
+        #ffffff 32.5%,       /* hasta 1/3 de la pantalla */
+        #9cc31b 32.5%,       /* desde 1/3 empieza el color */
+        #9cc31b 100%       /* color hasta abajo */
+  );
+}
+
+#contenedorEncabezado1 {
+    font-size: 12px; /*Tamnaño del texto*/
+    display: flex;
+    width: 250px;
+    height: 50px;
+    max-width: 980px;
+    margin: 5px 0 -10px auto;
+    
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    overflow: hidden;
+}
+
+#contenedorEncabezado1>div {
+
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+#formulario1 {
+    font-size: 11px; /*Tamnaño del texto*/
+    background-color: #2e3a35;    /* color relleno --------------------------------------Toto dengro con este valor*/
+    color: #fff;                  /* texto blanco */
+    border-top-left-radius: 30px; /* esquinas izquierdas */
+    border-bottom-left-radius: 30px;
+}
+#test1 {
+    font-size: 80%;
+    background-color: #cbcbcb;
+}
+#resultados1 {
+    font-size: 80%;
+    background-color: #cbcbcb;
+}
+
+/*Isotipo seccion 1*/
+
+#isotipoIMG1 {
+    width: 50%;
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#bienvenido1 {
+    text-align: center;
+    font-size: 45px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#mensajeBienvenida1 {
+    text-align: justify;
+    font-size: 16px;
+}
+
+/* Anchos específicos para cada campo */
+.nombre,
+.correo {
+    width: 100%;
+}
+.genero,
+.formacion {
+    width: 60%;
+}
+.fecha {
+    width: 37%;
+}
+
+/*Contenedor de las entradas de datos nombre, Correo, Genero, Formacion, Fecha de nacimiento*/
+#campoDatos1 {
+    background-color: white; /* color de fondo del contenedor */
+    padding: 40px;             /* espacio interno */
+    border-radius: 15px;       /* bordes redondeados */
+    max-width: 500px;          /* ancho máximo para que no se vea gigante */
+    margin: 40px auto;         /* centra el contenedor en la página */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* sombra suave */
+    text-align: left;          /*Alineado todo a la derecha*/
+}
+
+/* Mnesaje princial p */
+#f_nacimiento1 {
+    margin-left: 22px; /*Separacion a lo largo*/
+    font-size: 14px;
+    color: black;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+#consarlogo1 {
+    position: relative;
+    right: -70%;               /* mueve la imagen hacia la derecha un 20% */
+    top: 20%;                  /* mueve la imagen hacia abajo un 10% del contenedor */
+    width: 150px; 
+}
+
+#contenedorEncabezado {
+    float: right;
+    display: flex;
+    width: 40%;
+    margin-top: 10px;
+    border: 2px solid #003b5b;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    overflow: hidden;
+}
+
+#contenedorEncabezado>div {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    /* espacio interno al texto */
+}
+
+/* Unificamos el estilo de inputs y selects (sección 1) con el de sección 2 */
+.campo-form {
+    width: 90%;
+    padding: 10px;
+    border: 2px solid #08810e;   /* mismo color que sección 2 */
+    border-radius: 8px;
+    background-color: #f0faff;  /* mismo fondo que sección 2 */
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto -15px auto;   /* espacio entre campos */
+}
+
+/* Opciones de los selects (también aplica en sección 1) */
+.campo-form option {
+    font-size: 11px;
+    color: #003b5b;
+    background-color: #e6f7ff;
+}
+
+.campo-form option:hover {
+    background-color: #b3e5fc;
+    color: #000;
+}
+
+/*Seccion 2 para el apartado de TEST ----------------SECCION 2 -------------------------------------SECCION2 -----------*/
+
+/* Contenedor de encabezado principal */
+#seccion2 {
+    max-width: 870px;          /* ancho relativo a la pantalla */
+    width: 550px;
+    align-content: center;             /* ocupa todo el ancho disponible */
+    margin: 0 auto;          /* centra horizontalmente */
+    padding: 20px;           /* espacio interno */
+    box-sizing: border-box;  /* incluye padding dentro del ancho */
+
+    /* Fondo degradado: 1/3 blanco, 2/3 color */
+    background: linear-gradient(
+        to bottom,
+        #ffffff 0%,        /* blanco desde arriba */
+        #ffffff 24.5%,       /* hasta 1/3 de la pantalla */
+        #9cc31b 24.5%,       /* desde 1/3 empieza el color */
+        #9cc31b 100%       /* color hasta abajo */
+  );
+}
+
+/* Imagen de Isotipo  */
+#isotipoIMG2 {
+    width: 37%;               /* ancho relativo del contenedor */
+    height: auto;             /* mantiene proporción */
+    margin-right: 60px;       /* espacio a la derecha */
+    margin-bottom: -100px;      /* espacio hacia abajo */
+    display: block;
+}
+#contenedorEncabezado2 {
+    font-size: 12px; /*Tamnaño del texto*/
+    display: flex;
+    width: 250px;
+    height: 50px;
+    max-width: 980px;
+    margin: 50px 0 -10px auto;
+    
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    overflow: hidden;
+}
+
+#contenedorEncabezado2>div {
+
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+#formulario2 {
+    font-size: 80%;
+    background-color: #dddedc;
+}
+#test2 {
+    font-size: 8px; /*Tamnaño del texto*/
+    background-color: #2e3a35;    /* color relleno */
+    color: #fff;                  /* texto blanco */
+    
+}
+#resultados2 {
+    font-size: 80%;
+    background-color: #dddedc;
+}
+
+#testTexto {
+    font-size: 50px; /*Tamaño del texto*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: start;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 20px;  /*Espaciio entre texto inferiro */
+    color: black;
+    font-weight: bold; /*Texto puesto en negritas*/
+}
+
+#objetivoTXT {
+    text-align: justify; /*Texto justificado*/
+    /*Mnesaje desntro de instrucciones*/
+    font-size: 16px;
+    /*Tamnaño del texto*/
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    /*Tipografica*/
+    margin-bottom: 20px;
+}
+
+#instrucciones {
+    justify-content: flex-start;
+    font-size: 30px;
+    /*Tamnaño del texto*/
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    /*Tipografica*/
+}
+
+#msjIntrucciones {
+    text-align: justify; /*Texto justificado*/
+    /*Mnesaje desntro de instrucciones*/
+    font-size: 16px;
+    /*Tamnaño del texto*/
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    /*Tipografica*/
+    margin-bottom: 20px;
+}
+.resaltado {
+    font-size: 14px;
+    /* tamaño del texto */
+    font-weight: bold;
+    /* negrita */
+    text-align: justify;
+    color: black;
+    /* color del texto */
+    text-transform: uppercase;
+    /* aseguramos mayúsculas */
+    padding: 5px 4px;
+    /* pequeño espacio alrededor del texto */
+    border-radius: 4px;
+    /* esquinas redondeadas opcional */
+}
+
+#contenedorPreguntas {
+    width: 100%;
+    background-color: white; /* color de fondo del contenedor */
+    padding: 5%;             /* espacio interno */
+    border-radius: 15px;       /* bordes redondeados */
+    max-width: 990px;          /* ancho máximo para que no se vea gigante */
+    margin: 40px auto;         /* centra el contenedor en la página */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* sombra suave */
+    text-align: left;  
+}
+/* Etiquetas de las preguntas */
+#preguntas-container select {
+    font-size: 1px;
+    width: 90%;
+    padding: 12px 15px;
+    margin-bottom: 16px;
+    border: 2px solid #003b5b;
+    border-radius: 8px;
+    background-color: #fff6f0;
+    color: #003b5b;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/*Texto de las preguntas */
+#preguntas-container label {
+    width: 100%;
+    padding: 2px;
+    font-size: 15px;   /* tamaño */
+    font-weight: 500;  /* semi-negrita */
+    color: black;    /* color del texto */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;    /* para que quede arriba del select */
+    margin-bottom: -5px; /*Separacion de el texto entre casilla de seleccion*/
+}
+
+/*Caracteristicas de el formato de las cajas de entrada */
+#preguntas-container select {
+    width: 90%;
+    padding: 5px 5px;
+    border: 2px solid #08810e;
+    border-radius: 8px;
+    background-color: #f0faff;
+    font-size: 16px;   /* tamaño del texto de las opciones */
+    font-weight: 500;
+    color: black; /*color del texto de las opciones*/
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto -25px auto; /*Ajuste de espacios entre select*/
+}
+/* Opciones dentro del desplegable */
+#preguntas-container select option {
+    font-size: 14px;           /* tamaño del texto de cada opción */
+    color: #003b5b;            /* color del texto */
+    background-color: #e6f7ff; /* color de fondo de las opciones */
+    padding: 6px 10px;         /* espacio interno */
+}
+
+/* (Opcional) Cambiar color al pasar el mouse por una opción (soporte parcial) */
+#preguntas-container select option:hover {
+    background-color: #b3e5fc;
+    color: #000;
+}
+
+/* Instrucción y cuadro de preguntas */
+fieldset {
+    border: none;
+    /* quita borde del cuadro */
+    padding: 0;
+    margin: 0 0 5px 0;
+    /* espacio inferior antes del botón */
+}
+
+/*Seccion 3 para el apartado de RESULTADOS ----------------SECCION 3 -------------------------------------SECCION23-----------*/
+
+/* Contenedor de encabezado principal */
+#seccion3 {
+    max-width: 90%;          /* ancho relativo a la pantalla */
+    width: 100%;             /* ocupa todo el ancho disponible */
+    margin: 0 auto;          /* centra horizontalmente */
+    padding: 20px;           /* espacio interno */
+    box-sizing: border-box;  /* incluye padding dentro del ancho */
+
+    /* Fondo degradado: 1/3 blanco, 2/3 color */
+    background: linear-gradient(
+        to bottom,
+        #ffffff 0%,        /* blanco desde arriba */
+        #ffffff 74.5%,       /* hasta 1/3 de la pantalla */
+         white 74.5%,       /* desde 1/3 empieza el color */
+        #9cc31b 100%       /* color hasta abajo */
+        );
+}
+
+#isotipoIMG3 {
+    width: 32%;               /* ancho relativo del contenedor */
+    height: auto;             /* mantiene proporción */
+    margin-right: 60px;       /* espacio a la derecha */
+    margin-bottom: -90px;      /* espacio hacia abajo */
+    display: block;
+}
+#contenedorEncabezado3 {
+    font-size: 12px; /*Tamnaño del texto*/
+    display: flex;
+    width: 250px;
+    height: 50px;
+    max-width: 980px;
+    margin: 50px 0 -10px auto;
+    
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    overflow: hidden;
+}
+#contenedorEncabezado3>div {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+#formulario3 {
+    font-size: 80%;
+    background-color: #dddedc;
+}
+#test3 {
+    font-size: 80%;
+    background-color: #dddedc;
+}
+#resultados3 {
+    font-size: 10px; /*Tamnaño del texto*/
+    background-color: #2e3a35;    /* color relleno */
+    color: #fff;                  /* texto blanco */
+}
+
+#m1Bloque {
+    font-size: 12px;
+}
+
+
+
+
+/* Mensaje puntaje final */
+#resultado-texto {
+    white-space: pre-line;
+}
+
+/* Botones para genero y fecha de namicimento*/
+button,
+#submit {
+    display: block;
+    width: 35%;
+    padding: 13px;
+    margin-top: 10px;
+    background-color: #ec6765;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.5s ease;
+}
+
+button:hover,
+#submit:hover {
+    background-color: #0f38c0;
+}
+
+/* Sección de resultados */
+#seccion3 {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* Texto del resultado */
+#resultado-texto {
+    font-style: oblique;
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+
+}
+
+/* Imagen de resultado */
+#resultado-imagen {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    margin: 0 auto 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(249, 0, 0, 0.2);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+#resultado-contenedor {
+    background-color: #f0f8ff;
+    /* Color de fondo suave */
+    border: 2px solid #003b5b;
+    /* Borde del contenedor */
+    border-radius: 12px;
+    /* Bordes redondeados */
+    padding: 20px;
+    /* Espacio interno */
+    margin: 0 auto 20px auto;
+    /* Centrado y margen inferior */
+    max-width: 800px;
+    /* Ancho máximo */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Sombra suave */
+    text-align: center;
+    /* Centrar texto */
+    font-size: 18px;
+    line-height: 1.5;
+    /* Espaciado de líneas */
+}
+
+
+/* Animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Imagen Pie de página */
+#consarlogo3 {
+    width: 40%;
+    margin-right: -260px; 
+}
+
+/* Responsive automático */
+@media (max-width: 768px) {
+    .campo-form {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .campo-form {
+        width: 100% !important;
+        /* todos ocupan todo el ancho en móviles */
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    button,
+    #submit {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    /* Ajuste imagen resultado*/
+    #resultado-imagen {
+        width: 95%;
+        max-width: 600px;
+        height: auto;
+    }
+}
+
+/* Fondos de proyecto */
+
+/*Noto Sans Regular*/
+@font-face {
+    font-family: 'NotoSans';
+    src: url('fonts/NotoSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Noto Sans Bold*/
+@font-face {
+    font-family: 'NotoSans';
+    src: url('fonts/NotoSans-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Noto Sans Italic*/
+@font-face {
+    font-family: 'NotoSans';
+    src: url('fonts/NotoSans-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/*Special Gothic Expanded One */
+@font-face {
+    font-family: 'SpecialGothicExpandedOne';
+    src: url('fonts/SpecialGothicExpandedOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
