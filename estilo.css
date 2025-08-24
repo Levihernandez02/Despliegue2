@@ -7,6 +7,11 @@
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
 }
+hr {
+    border: none;
+    border-top: 1px solid white;
+    margin: 20px 0;
+}
 
 /* Contenedor de la página completa */
 body {
@@ -43,8 +48,8 @@ p,hr {
     background: linear-gradient(
         to bottom,
         #ffffff 0%,        /* blanco desde arriba */
-        #ffffff 32.5%,       /* hasta 1/3 de la pantalla */
-        #9cc31b 32.5%,       /* desde 1/3 empieza el color */
+        #ffffff 34.5%,       /* hasta 1/3 de la pantalla */
+        #9cc31b 34.5%,       /* desde 1/3 empieza el color */
         #9cc31b 100%       /* color hasta abajo */
   );
 }
@@ -52,7 +57,7 @@ p,hr {
 #contenedorEncabezado1 {
     font-size: 12px; /*Tamnaño del texto*/
     display: flex;
-    width: 250px;
+    width: 350px;
     height: 50px;
     max-width: 980px;
     margin: 5px 0 -10px auto;
@@ -104,14 +109,25 @@ p,hr {
 }
 
 #bienvenido1 {
-    text-align: center;
-    font-size: 45px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    font-size: 55px;
+    font-family: 'SpecialGothicExpandedOne', sans-serif; /*Tipografia*/
+    font-size: bold; /*Negritas*/
 }
 
 #mensajeBienvenida1 {
-    text-align: justify;
-    font-size: 16px;
+    text-align: justify; 
+    font-size: 20px; /*Tamaño del texto*/
+    font-family: 'NotoSans', sans-serif; /*Tipografia*/
+}
+
+#mensajeBienvenida2 {
+    text-align: justify; /*Texto justificado*/
+    font-size: 16px; /*Tamnaño del texto*/
+    color: black;
+    font-family: 'NotoSans', sans-serif; /*Tipografia*/
+    font-style: italic ; /*Cursiva*/
+    font-weight: bold;
 }
 
 /* Anchos específicos para cada campo */
@@ -136,6 +152,12 @@ p,hr {
     margin: 40px auto;         /* centra el contenedor en la página */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* sombra suave */
     text-align: left;          /*Alineado todo a la derecha*/
+    font-family: 'NotoSans', sans-serif; /*Tipografia*/
+    font-style: bold; /*Negritas*/
+}
+
+#Nombre, #Correo {
+    color: black;
 }
 
 /* Mnesaje princial p */
@@ -160,12 +182,10 @@ p,hr {
     display: flex;
     width: 40%;
     margin-top: 10px;
-    border: 2px solid #003b5b;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     background-color: #f9f9f9;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -199,22 +219,20 @@ p,hr {
 /* Opciones de los selects (también aplica en sección 1) */
 .campo-form option {
     font-size: 11px;
-    color: #003b5b;
+    color: black;
     background-color: #e6f7ff;
 }
-
 .campo-form option:hover {
     background-color: #b3e5fc;
     color: #000;
 }
 
 /*Seccion 2 para el apartado de TEST ----------------SECCION 2 -------------------------------------SECCION2 -----------*/
-
 /* Contenedor de encabezado principal */
 #seccion2 {
     max-width: 870px;          /* ancho relativo a la pantalla */
     width: 550px;
-    align-content: center;             /* ocupa todo el ancho disponible */
+    align-content: center;    /* ocupa todo el ancho disponible */
     margin: 0 auto;          /* centra horizontalmente */
     padding: 20px;           /* espacio interno */
     box-sizing: border-box;  /* incluye padding dentro del ancho */
@@ -223,34 +241,30 @@ p,hr {
     background: linear-gradient(
         to bottom,
         #ffffff 0%,        /* blanco desde arriba */
-        #ffffff 24.5%,       /* hasta 1/3 de la pantalla */
-        #9cc31b 24.5%,       /* desde 1/3 empieza el color */
+        #ffffff 21%,       /* hasta 1/3 de la pantalla */
+        #9cc31b 21%,      /* desde 1/3 empieza el color */
         #9cc31b 100%       /* color hasta abajo */
   );
 }
 
 /* Imagen de Isotipo  */
 #isotipoIMG2 {
-    width: 37%;               /* ancho relativo del contenedor */
+    width: 25%;               /* ancho relativo del contenedor */
     height: auto;             /* mantiene proporción */
-    margin-right: 60px;       /* espacio a la derecha */
-    margin-bottom: -100px;      /* espacio hacia abajo */
     display: block;
 }
 #contenedorEncabezado2 {
     font-size: 12px; /*Tamnaño del texto*/
     display: flex;
-    width: 250px;
-    height: 50px;
-    max-width: 980px;
-    margin: 50px 0 -10px auto;
-    
+    width: 350px;
+    height: 45px;
+    max-width: 500px; /*mueve posicion en horizontal*/
+    margin-top: -40px; /*mueve en posicion vertical*/
+    margin-left: 180px;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     background-color: #f9f9f9;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-
-    display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: stretch;
@@ -258,11 +272,11 @@ p,hr {
 }
 
 #contenedorEncabezado2>div {
-
     flex: 1;
     text-align: center;
-    padding: 20px;
+    padding: 19px;
 }
+
 #formulario2 {
     font-size: 80%;
     background-color: #dddedc;
@@ -280,23 +294,20 @@ p,hr {
 
 #testTexto {
     font-size: 50px; /*Tamaño del texto*/
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: start;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-bottom: 20px;  /*Espaciio entre texto inferiro */
     color: black;
-    font-weight: bold; /*Texto puesto en negritas*/
+    font-family: 'NotoSans', sans-serif; /*Tipografia*/
+    font-weight: bold; /*Negritas*/
 }
 
 #objetivoTXT {
     text-align: justify; /*Texto justificado*/
-    /*Mnesaje desntro de instrucciones*/
-    font-size: 16px;
-    /*Tamnaño del texto*/
+    font-size: 16px; /*Tamnaño del texto*/
     color: black;
-    font-family: 'Poppins', sans-serif;
-    /*Tipografica*/
-    margin-bottom: 20px;
+    font-family: 'NotoSans', sans-serif; /*Tipografia*/
+    font-style: italic ; /*Cursiva*/
+    font-weight: bold;
 }
 
 #instrucciones {
@@ -306,38 +317,35 @@ p,hr {
     font-weight: bold;
     margin-bottom: 10px;
     color: black;
-    font-family: 'Poppins', sans-serif;
-    /*Tipografica*/
+    font-family: 'NotoSans', sans-serif; /*Tipografia*/
+    font-style: bold ; /*Negritas*/
+    
 }
 
 #msjIntrucciones {
     text-align: justify; /*Texto justificado*/
-    /*Mnesaje desntro de instrucciones*/
-    font-size: 16px;
-    /*Tamnaño del texto*/
+    font-size: 16px;/*Tamnaño del texto*/
     color: black;
-    font-family: 'Poppins', sans-serif;
-    /*Tipografica*/
-    margin-bottom: 20px;
+    font-family: 'notoSans', sans-serif; /*Tipografia*/
 }
 .resaltado {
-    font-size: 14px;
-    /* tamaño del texto */
-    font-weight: bold;
-    /* negrita */
+    font-size: 14px;/* tamaño del texto */
     text-align: justify;
-    color: black;
-    /* color del texto */
-    text-transform: uppercase;
-    /* aseguramos mayúsculas */
-    padding: 5px 4px;
-    /* pequeño espacio alrededor del texto */
-    border-radius: 4px;
-    /* esquinas redondeadas opcional */
+    color: black; /* color del texto */
+    text-transform: uppercase;/* aseguramos mayúsculas */
+    font-family: 'NotoSans', sans-serif; /*Tipografia*/
+    font-weight: bold; /*Negritas*/
+    font-style: italic ; /*Cursiva*/
+}
+
+#instrucciones,
+#msjIntrucciones {
+  margin: 0;          /* quitamos márgenes por defecto */
+  line-height: 1.3;   /* control de altura de línea */
 }
 
 #contenedorPreguntas {
-    width: 100%;
+    width: 87%; /*Tamaño de en contenedor*/
     background-color: white; /* color de fondo del contenedor */
     padding: 5%;             /* espacio interno */
     border-radius: 15px;       /* bordes redondeados */
@@ -346,63 +354,48 @@ p,hr {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* sombra suave */
     text-align: left;  
 }
-/* Etiquetas de las preguntas */
-#preguntas-container select {
-    font-size: 1px;
-    width: 90%;
-    padding: 12px 15px;
-    margin-bottom: 16px;
-    border: 2px solid #003b5b;
-    border-radius: 8px;
-    background-color: #fff6f0;
-    color: #003b5b;
-    font-size: 15px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
 
 /*Texto de las preguntas */
 #preguntas-container label {
     width: 100%;
-    padding: 2px;
-    font-size: 15px;   /* tamaño */
-    font-weight: 500;  /* semi-negrita */
+    font-family: 'NotoSans', sans-serif; /*Tipografia*/
+    font-style: normal;
+    font-size: 16px;   /* tamaño */
     color: black;    /* color del texto */
-    cursor: pointer;
     transition: all 0.3s ease;
     display: block;    /* para que quede arriba del select */
-    margin-bottom: -5px; /*Separacion de el texto entre casilla de seleccion*/
+    margin-bottom: 5px; /*Separacion de el texto entre casilla de seleccion*/
 }
 
 /*Caracteristicas de el formato de las cajas de entrada */
 #preguntas-container select {
-    width: 90%;
+    width: 90%; /*Tamaño de la caja de seleccion*/
     padding: 5px 5px;
     border: 2px solid #08810e;
-    border-radius: 8px;
-    background-color: #f0faff;
-    font-size: 16px;   /* tamaño del texto de las opciones */
+    border-radius: 5px;
+    background-color: white; /*Color de la caja de pregunta*/
+    font-size: 13px;   /* tamaño del texto de las opciones */
     font-weight: 500;
     color: black; /*color del texto de las opciones*/
     cursor: pointer;
     transition: all 0.3s ease;
     display: block;
     margin: 0 auto -25px auto; /*Ajuste de espacios entre select*/
+    font-style: 'NotoSans', sans-serif; /*Tipografia*/
+    font-style: italic ; /*Cursiva*/
 }
 /* Opciones dentro del desplegable */
 #preguntas-container select option {
     font-size: 14px;           /* tamaño del texto de cada opción */
-    color: #003b5b;            /* color del texto */
+    color: black;            /* color del texto */
     background-color: #e6f7ff; /* color de fondo de las opciones */
     padding: 6px 10px;         /* espacio interno */
 }
-
-/* (Opcional) Cambiar color al pasar el mouse por una opción (soporte parcial) */
-#preguntas-container select option:hover {
-    background-color: #b3e5fc;
-    color: #000;
+/* Cuando el usuario selecciona una opción distinta de la inicial */
+#preguntas-container select:valid {
+    background-color: #ecfdfd; /*Color al seleccionar*/
 }
+
 
 /* Instrucción y cuadro de preguntas */
 fieldset {
@@ -417,8 +410,9 @@ fieldset {
 
 /* Contenedor de encabezado principal */
 #seccion3 {
-    max-width: 90%;          /* ancho relativo a la pantalla */
-    width: 100%;             /* ocupa todo el ancho disponible */
+    max-width: 870px;          /* ancho relativo a la pantalla */
+    width: 550px;
+    align-content: center;    /* ocupa todo el ancho disponible */
     margin: 0 auto;          /* centra horizontalmente */
     padding: 20px;           /* espacio interno */
     box-sizing: border-box;  /* incluye padding dentro del ancho */
@@ -426,51 +420,51 @@ fieldset {
     /* Fondo degradado: 1/3 blanco, 2/3 color */
     background: linear-gradient(
         to bottom,
-        #ffffff 0%,        /* blanco desde arriba */
-        #ffffff 74.5%,       /* hasta 1/3 de la pantalla */
-         white 74.5%,       /* desde 1/3 empieza el color */
-        #9cc31b 100%       /* color hasta abajo */
-        );
+        white 0%,        /* blanco desde arriba */
+        white 20%,       /* hasta 1/3 de la pantalla */
+        rgb(255, 254, 254) 20%,      /* desde 1/3 empieza el color */
+        rgb(204, 204, 204) 100%       /* color hasta abajo */
+  );
 }
 
+/* Imagen de Isotipo  */
 #isotipoIMG3 {
-    width: 32%;               /* ancho relativo del contenedor */
+    width: 25%;               /* ancho relativo del contenedor */
     height: auto;             /* mantiene proporción */
-    margin-right: 60px;       /* espacio a la derecha */
-    margin-bottom: -90px;      /* espacio hacia abajo */
     display: block;
 }
+
 #contenedorEncabezado3 {
     font-size: 12px; /*Tamnaño del texto*/
     display: flex;
-    width: 250px;
-    height: 50px;
-    max-width: 980px;
-    margin: 50px 0 -10px auto;
-    
+    width: 350px;
+    height: 45px;
+    max-width: 500px; /*mueve posicion en horizontal*/
+    margin-top: -40px; /*mueve en posicion vertical*/
+    margin-left: 180px;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     background-color: #f9f9f9;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-
-    display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: stretch;
     overflow: hidden;
 }
+
 #contenedorEncabezado3>div {
     flex: 1;
     text-align: center;
-    padding: 20px;
+    padding: 19px;
 }
+
 #formulario3 {
     font-size: 80%;
     background-color: #dddedc;
 }
 #test3 {
     font-size: 80%;
-    background-color: #dddedc;
+    background-color: #dddedc ;
 }
 #resultados3 {
     font-size: 10px; /*Tamnaño del texto*/
@@ -478,25 +472,46 @@ fieldset {
     color: #fff;                  /* texto blanco */
 }
 
-#m1Bloque {
-    font-size: 12px;
+/* Imagen de resultado */
+#resultado-imagen {
+    display: block;
+    width: 90%;
+    height: auto;
+    margin: 0 auto 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(87, 87, 87, 0.9);
+    animation: fadeIn 0.8s ease-in-out;
 }
 
-
-
+#resultado-contenedor {
+    
+    line-height: 1.5;/* Espaciado de líneas */
+    border-radius: 15px;         /* esquinas redondeadas */
+    text-align: center;          /* centrar el texto */
+    border: 1px solid white;      /* borde gris claro */
+    background-color: white;   /* fondo suave */
+    padding: 15px;               /* espacio interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* sombra */
+    max-width: 500px;            /* ancho opcional */
+    margin: 40px auto;           /* centrado horizontal */
+}
 
 /* Mensaje puntaje final */
 #resultado-texto {
     white-space: pre-line;
+    font-style: 'SpecialGothicExpandedOne', sans-serif; /*Tipografia*/
+    font-style: oblique;
+    font-weight: bold;
 }
 
 /* Botones para genero y fecha de namicimento*/
 button,
 #submit {
     display: block;
-    width: 35%;
+    width: 40%;
     padding: 13px;
-    margin-top: 10px;
+    margin-top: 40px;
+    margin-right: auto;
     background-color: #ec6765;
     color: white;
     font-size: 16px;
@@ -512,58 +527,11 @@ button:hover,
     background-color: #0f38c0;
 }
 
-/* Sección de resultados */
-#seccion3 {
-    width: 100%;
-    max-width: 1000px;
-    margin: auto;
-    text-align: center;
-    padding-top: 20px;
+/* Imagen Pie de página */
+#consarlogo3 {
+    width: 40%;
+    margin-left: auto; 
 }
-
-/* Texto del resultado */
-#resultado-texto {
-    font-style: oblique;
-    font-size: 18px;
-    margin-bottom: 15px;
-    color: #333;
-
-}
-
-/* Imagen de resultado */
-#resultado-imagen {
-    display: block;
-    width: 100%;
-    max-width: 900px;
-    height: auto;
-    margin: 0 auto 20px auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(249, 0, 0, 0.2);
-    animation: fadeIn 0.8s ease-in-out;
-}
-
-#resultado-contenedor {
-    background-color: #f0f8ff;
-    /* Color de fondo suave */
-    border: 2px solid #003b5b;
-    /* Borde del contenedor */
-    border-radius: 12px;
-    /* Bordes redondeados */
-    padding: 20px;
-    /* Espacio interno */
-    margin: 0 auto 20px auto;
-    /* Centrado y margen inferior */
-    max-width: 800px;
-    /* Ancho máximo */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    /* Sombra suave */
-    text-align: center;
-    /* Centrar texto */
-    font-size: 18px;
-    line-height: 1.5;
-    /* Espaciado de líneas */
-}
-
 
 /* Animación */
 @keyframes fadeIn {
@@ -571,54 +539,73 @@ button:hover,
         opacity: 0;
         transform: translateY(10px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-/* Imagen Pie de página */
-#consarlogo3 {
-    width: 40%;
-    margin-right: -260px; 
-}
-
 /* Responsive automático */
+/*Ajustes generales en tablets y móviles medianos */
 @media (max-width: 768px) {
-    .campo-form {
-        font-size: 14px;
-        padding: 10px;
-    }
+  #seccion1, #seccion2, #seccion3 {
+    width: 95%;       /* usan casi todo el ancho */
+    padding: 15px;    /* menos padding */
+  }
+
+  #contenedorEncabezado1,
+  #contenedorEncabezado2,
+  #contenedorEncabezado3 {
+    width: 100%;          /* ocupan todo el ancho */
+    margin: 10px auto;    /* centrados automáticamente */
+    height: auto;         /* que se ajusten en altura */
+    font-size: 14px;
+  }
+
+  #isotipoIMG1, #isotipoIMG2, #isotipoIMG3 {
+    width: 50%;   /* isotipos más grandes */
+    margin: 10px auto;
+  }
+
+  #consarlogo1, #consarlogo3 {
+    position: static;   /* elimina posicionamiento forzado */
+    display: block;
+    margin: 20px auto;
+    width: 60%;
+  }
 }
 
+/* Extra pequeño (móviles chicos) */
 @media (max-width: 480px) {
-    h1 {
-        font-size: 20px;
-    }
+  #bienvenido1 {
+    font-size: 28px; /* más compacto */
+    text-align: center;
+  }
 
-    .campo-form {
-        width: 100% !important;
-        /* todos ocupan todo el ancho en móviles */
-        font-size: 13px;
-        padding: 8px;
-    }
+  #mensajeBienvenida1,
+  #mensajeBienvenida2,
+  #objetivoTXT,
+  #msjIntrucciones {
+    font-size: 14px;
+  }
 
-    button,
-    #submit {
-        font-size: 13px;
-        padding: 10px;
-    }
+  #testTexto {
+    font-size: 26px;
+    text-align: center;
+  }
 
-    /* Ajuste imagen resultado*/
-    #resultado-imagen {
-        width: 95%;
-        max-width: 600px;
-        height: auto;
-    }
+  button,
+  #submit {
+    width: 100%;  /* botones ocupan todo el ancho */
+  }
+
+  #campoDatos1, 
+  #contenedorPreguntas,
+  #resultado-contenedor {
+    width: 95%;
+    padding: 15px;
+  }
 }
-
-/* Fondos de proyecto */
 
 /*Noto Sans Regular*/
 @font-face {
@@ -632,7 +619,7 @@ button:hover,
 @font-face {
     font-family: 'NotoSans';
     src: url('fonts/NotoSans-Bold.ttf') format('truetype');
-    font-weight: normal;
+    font-weight: bold;
     font-style: normal;
 }
 
