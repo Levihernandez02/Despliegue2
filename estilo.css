@@ -410,8 +410,7 @@ fieldset {
 
 /* Contenedor de encabezado principal */
 #seccion3 {
-    position: relative;
-    max-width: 900px;          /* ancho relativo a la pantalla */
+    max-width: 90%;          /* ancho relativo a la pantalla */
     width: 100%;
     align-content: center;    /* ocupa todo el ancho disponible */
     margin: 0 auto;          /* centra horizontalmente */
@@ -532,6 +531,7 @@ button:hover,
 #consarlogo3 {
     width: 40%;
     margin-left: auto; 
+    
 }
 
 /* Animación */
