@@ -63,8 +63,8 @@ window.addEventListener("load", function () {
             imagenSrc = "img/NivelBienestarJPG/NivelesBienestar_Alto.jpg";
         }
 
-        // Mostrar resultado en la sección 3
-        const mensajeFinal = `Tu puntaje total es de: ${puntajeTotal}\n${mensaje}`;
+        // Mostrar resultado en la sección 3   Elimine la opcion de agregar mensaje pues ya no se requiere el mensaje personalizado ${puntajeTotal}\n${mensaje}
+        const mensajeFinal = `TU RESULTADO \n Tu puntaje total es de: ${puntajeTotal}`;
         document.getElementById("resultado-texto").textContent = mensajeFinal;
         document.getElementById("seccion2").style.display = "none";
         document.getElementById("seccion3").style.display = "block";
