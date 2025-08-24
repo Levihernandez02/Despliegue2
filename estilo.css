@@ -410,7 +410,8 @@ fieldset {
 
 /* Contenedor de encabezado principal */
 #seccion3 {
-    max-width: 90%;          /* ancho relativo a la pantalla */
+    position: relative;
+    max-width: 900px;          /* ancho relativo a la pantalla */
     width: 100%;
     align-content: center;    /* ocupa todo el ancho disponible */
     margin: 0 auto;          /* centra horizontalmente */
