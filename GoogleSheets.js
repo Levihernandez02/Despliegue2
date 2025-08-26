@@ -11,6 +11,7 @@ const preguntas = [
     { texto: "Entiendo cómo funciona el interés compuesto.", name: "P9_InteresCompuesto" },
     { texto: "Estoy tomando decisiones que me ayudarán a tener una vida financiera estable.", name: "P10_DecisionesFinancieras" }
 ];
+
 // Asignacion de puntos por tipo de respuesta
 const opciones = [
     { valor: "4", texto: "Totalmente" },
@@ -20,7 +21,7 @@ const opciones = [
     { valor: "0", texto: "No me describe" }
 ];
 
-// Fincion de ventanas 
+// Funcion de ventanas 
 window.addEventListener("load", function () {
     const form = document.querySelector("form");
 
@@ -45,31 +46,27 @@ window.addEventListener("load", function () {
             puntajeTotal += parseInt(sel.value || "0", 10);
         });
 
-        // Variables para mensaje e imagen
-        let mensaje = "";
+        // Variables para imagen (mensaje ya no se usa)
         let imagenSrc = "";
-
         if (puntajeTotal >= 0 && puntajeTotal <= 10) {
-            mensaje = "Necesitas comenzar desde lo básico: Entender tu AFORE, ahorrar y conocer los conceptos financieros esenciales.";
             imagenSrc = "img/NivelBienestarJPG/NivelesBienestar_Critico.jpg";
         } else if (puntajeTotal >= 11 && puntajeTotal <= 20) {
-            mensaje = "Es momento de adquirir más información, ahorrar y tomar control.";
             imagenSrc = "img/NivelBienestarJPG/NivelesBienestar_Bajo.jpg";
         } else if (puntajeTotal >= 21 && puntajeTotal <= 30) {
-            mensaje = "Tienes noción y algunos hábitos, pero aún hay áreas por fortalecer.";
             imagenSrc = "img/NivelBienestarJPG/NivelesBienestar_Intermedio.jpg";
         } else if (puntajeTotal >= 31 && puntajeTotal <= 40) {
-            mensaje = "Tienes buenos hábitos, conocimientos y perspectiva financiera. Sigue por ese camino.";
             imagenSrc = "img/NivelBienestarJPG/NivelesBienestar_Alto.jpg";
         }
 
-        // Mostrar resultado en la sección 3   Elimine la opcion de agregar mensaje pues ya no se requiere el mensaje personalizado ${puntajeTotal}\n${mensaje}
-        const mensajeFinal = `TU RESULTADO \n Tu puntaje total es de: ${puntajeTotal}`;
+        // Mostrar resultado en la sección 3
+        const nombre = document.querySelector('input[name="Nombre"]').value; // obtenemos el nombre
+        const mensajeFinal = `Hola ${nombre}\nTu puntaje total es de: ${puntajeTotal}`;
         document.getElementById("resultado-texto").textContent = mensajeFinal;
         document.getElementById("seccion2").style.display = "none";
         document.getElementById("seccion3").style.display = "block";
+        window.scrollTo({ top: 0, behavior: "smooth" }); // 🔹 subir al encabezado
 
-        // Mostrar imagen
+        // Mostrar imagen de nivel
         const imgElemento = document.getElementById("resultado-imagen");
         imgElemento.src = imagenSrc;
         imgElemento.style.display = "block";
@@ -85,6 +82,13 @@ window.addEventListener("load", function () {
             console.log("Datos enviados a Google Sheets con puntajeTotal:", puntajeTotal);
         });
     });
+
+    // 🔹 Hacer que la imagen en la sección 3 reinicie el formulario
+    const imgReinicio = document.getElementById("isotipoIMG3");
+    if (imgReinicio) {
+        imgReinicio.style.cursor = "pointer"; // cursor tipo botón
+        imgReinicio.addEventListener("click", reiniciarFormulario);
+    }
 });
 
 // Mostrar preguntas dinámicas (llamado desde el botón "Continuar")
@@ -109,6 +113,11 @@ function mostrarPreguntas() {
         genero.focus();
         return;
     }
+    if (!Formacion.value) {
+        alert("Por favor selecciona tu área de formación");
+        Formacion.focus();
+        return;
+    }
     if (!fecha.value) {
         alert("Por favor ingresa tu fecha de nacimiento");
         fecha.focus();
@@ -118,6 +127,7 @@ function mostrarPreguntas() {
     // Mostrar sección de preguntas
     document.getElementById("seccion1").style.display = "none";
     document.getElementById("seccion2").style.display = "block";
+    window.scrollTo({ top: 0, behavior: "smooth" }); // 🔹 subir al encabezado
 
     const contenedor = document.getElementById("preguntas-container");
     contenedor.innerHTML = "";
